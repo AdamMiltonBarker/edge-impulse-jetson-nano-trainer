@@ -1,0 +1,107 @@
+{
+    "data": {
+        "file_type": [
+            ".jpg",
+            ".jpeg",
+            ".png"
+        ],
+        "test_data": false,
+        "test_dir": "data/test",
+        "train_data": false,
+        "train_dir": "data/train",
+        "type": "",
+        "types": [
+            "local",
+            "remote"
+        ]
+    },
+    "device": {
+        "id": ""
+    },
+    "features": {
+        "generated": false
+    },
+    "impulse": {
+        "created": false,
+        "data": {
+            "dspBlocks": [
+                {
+                    "axes": [
+                        "image"
+                    ],
+                    "id": 2,
+                    "input": 0,
+                    "name": "Image",
+                    "title": "Image",
+                    "type": "image"
+                }
+            ],
+            "inputBlocks": [
+                {
+                    "id": 1,
+                    "imageHeight": 96,
+                    "imageWidth": 96,
+                    "name": "Image",
+                    "resizeMethod": "fit-short",
+                    "resizeMode": "fit-short",
+                    "title": "Images",
+                    "type": "image"
+                }
+            ],
+            "learnBlocks": [
+                {
+                    "dsp": [
+                        2
+                    ],
+                    "id": 3,
+                    "name": "Transfer learning",
+                    "primaryVersion": true,
+                    "title": "Transfer Learning (Images)",
+                    "type": "keras-transfer-image"
+                }
+            ]
+        }
+    },
+    "model": {
+        "tested": false,
+        "train": {
+            "autoClassWeights": true,
+            "learningRate": 0.0005,
+            "mode": "expert",
+            "profileInt8": true,
+            "selectedModelType": "int8",
+            "trainingCycles": 20
+        },
+        "trained": false
+    },
+    "project": {
+        "id": "",
+        "key": "",
+        "name": ""
+    },
+    "socket": {
+        "debug": false,
+        "ignore": [
+            "hello",
+            "new-file-training",
+            "update-metadata",
+            "deployment-cache-invalidated"
+        ]
+    },
+    "urls": {
+        "create_impulse": "https://studio.edgeimpulse.com/v1/api/{projectId}/impulse",
+        "device_connect_doc": "https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-cpu-gpu-targets/nvidia-jetson-nano",
+        "generate_features": "https://studio.edgeimpulse.com/v1/api/{projectId}/jobs/generate-features",
+        "get_device": "https://studio.edgeimpulse.com/v1/api/{projectId}/device/{deviceId}",
+        "get_devices": "https://studio.edgeimpulse.com/v1/api/{projectId}/devices",
+        "get_websocket_key": "https://studio.edgeimpulse.com/v1/api/{projectId}/socket-token",
+        "impulse_blocks": "https://studio.edgeimpulse.com/v1/api/{projectId}/impulse/blocks",
+        "login": "https://studio.edgeimpulse.com/v1/api-login",
+        "project_create": "https://studio.edgeimpulse.com/v1/api/projects/create",
+        "project_key_create": "https://studio.edgeimpulse.com/v1/api/{projectId}/apikeys",
+        "test": "https://studio.edgeimpulse.com/v1/api/{projectId}/jobs/classify",
+        "test_data_ingestion": "https://ingestion.edgeimpulse.com/api/testing/files",
+        "train": "https://studio.edgeimpulse.com/v1/api/{projectId}/jobs/train/keras/{learnId}",
+        "train_data_ingestion": "https://ingestion.edgeimpulse.com/api/training/files"
+    }
+}
